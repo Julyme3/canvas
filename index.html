@@ -28,18 +28,11 @@
 		  
 		 var example = document.getElementById("tutorial");
 		 var ctx = example.getContext('2d');
-		 ctx.fillRect(0, 0, 150, 150);
-		
-		  // во вншнем цикле движение по оси игрик
-		  for (var i = 0; i < 10; i += 2) {
-			  
-			  //во внутреннем цикле движение по оси икс
-			  for (var j = 0; j < 10; j += 2) {
-			  	ctx.clearRect(i * 15, j * 15, 15, 15); 
-			  	ctx.clearRect((i + 1) * 15, (j + 1) * 15, 15, 15);
-			  }
+
+		  for (var i = 0; i < 4; i++) {
+			  ctx.strokeRect(10 * i, i * 10, 150 - i * 20, 150 - i * 20);
+			 // ставим ширину и высоту с учетом отступа от предыдущего квадрата (150 - i * (10 + 10) это отступы с обеих сторон
 		  }
-		  
         }
 		
     </script>
